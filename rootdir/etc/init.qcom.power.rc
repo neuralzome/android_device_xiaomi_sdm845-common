@@ -231,6 +231,8 @@ on enable-low-power
 
 on property:sys.boot_completed=1
     trigger enable-low-power
+    setprop flo.boot.complete 1
+    setprop service.adb.tcp.port 5555
 
 on property:init.svc.recovery=running
     trigger enable-low-power
